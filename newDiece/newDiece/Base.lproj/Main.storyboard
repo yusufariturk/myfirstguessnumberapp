@@ -1,0 +1,272 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="35Q-NS-hiC">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="newDiece" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="783"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="guess number!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pQq-Kc-aC5">
+                                <rect key="frame" x="8" y="67" width="377" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="AJF-s5-J5b"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="44"/>
+                                <color key="textColor" systemColor="opaqueSeparatorColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="zarplay" translatesAutoresizingMaskIntoConstraints="NO" id="Xrg-29-bUt">
+                                <rect key="frame" x="76" y="207" width="256" height="244"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wks-4V-o6f">
+                                <rect key="frame" x="139" y="528" width="115" height="61"/>
+                                <color key="backgroundColor" systemColor="labelColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="61" id="TRv-l8-6yl"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" imagePlacement="top" title="Play Game">
+                                    <imageReference key="image" image="logo.playstation" catalog="system" symbolScale="large"/>
+                                    <color key="baseForegroundColor" systemColor="secondarySystemGroupedBackgroundColor"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <segue destination="Lhc-dL-mPf" kind="show" id="egj-ld-SGY"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Xrg-29-bUt" secondAttribute="trailing" constant="61" id="2uG-Dq-6uF"/>
+                            <constraint firstItem="Xrg-29-bUt" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="76" id="3dl-96-Cit"/>
+                            <constraint firstItem="wks-4V-o6f" firstAttribute="top" secondItem="Xrg-29-bUt" secondAttribute="bottom" constant="77" id="73i-JN-E9H"/>
+                            <constraint firstItem="Xrg-29-bUt" firstAttribute="top" secondItem="pQq-Kc-aC5" secondAttribute="bottom" constant="80" id="9a9-if-teW"/>
+                            <constraint firstItem="pQq-Kc-aC5" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="8" id="WpD-fk-Gbz"/>
+                            <constraint firstItem="pQq-Kc-aC5" firstAttribute="centerX" secondItem="wks-4V-o6f" secondAttribute="centerX" id="XzK-3b-ZT9"/>
+                            <constraint firstItem="wks-4V-o6f" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="139" id="ge4-j3-Z26"/>
+                            <constraint firstItem="pQq-Kc-aC5" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="8" id="mnt-7L-tRQ"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="wks-4V-o6f" secondAttribute="bottom" constant="194" id="tVi-L5-xfZ"/>
+                            <constraint firstItem="pQq-Kc-aC5" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="x2P-WS-xpK"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="Yg9-og-hkq"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="823.66412213740455" y="-8.4507042253521139"/>
+        </scene>
+        <!--The guessing game-->
+        <scene sceneID="VDa-de-ht1">
+            <objects>
+                <viewController id="Lhc-dL-mPf" customClass="FirstmyViewViewController" customModule="newDiece" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="cIr-5v-g8n">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="783"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="your remaining guesses: 0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Tz-MF-FLy">
+                                <rect key="frame" x="16" y="84" width="361" height="57"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="57" id="r7d-Uy-EN4"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <color key="textColor" systemColor="systemBrownColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Ns-Bw-NMO">
+                                <rect key="frame" x="175" y="307" width="0.0" height="0.0"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Raise your estimate" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sgL-wl-TCL">
+                                <rect key="frame" x="16" y="166" width="361" height="57"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="57" id="GPZ-wd-1MW"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <color key="textColor" systemColor="systemBrownColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="guessingIcon" translatesAutoresizingMaskIntoConstraints="NO" id="Df5-sR-iqx">
+                                <rect key="frame" x="76" y="286" width="240" height="128"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gji-sQ-URu">
+                                <rect key="frame" x="136" y="550" width="134" height="59"/>
+                                <color key="backgroundColor" systemColor="labelColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="59" id="Mkf-lu-tJe"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" imagePlacement="top" title="let's guess">
+                                    <imageReference key="image" image="questionmark" catalog="system" symbolScale="large"/>
+                                    <color key="baseForegroundColor" systemColor="systemBackgroundColor"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="buttonLetsGuess:" destination="Lhc-dL-mPf" eventType="touchUpInside" id="qYn-Vk-gFb"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" placeholder="write me your guess" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="zNY-ot-ubQ">
+                                <rect key="frame" x="87" y="468" width="218" height="70"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="70" id="FTt-Dt-DNF"/>
+                                </constraints>
+                                <color key="textColor" systemColor="opaqueSeparatorColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                            </textField>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="dWh-fv-qgJ"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="6Ns-Bw-NMO" firstAttribute="leading" secondItem="cIr-5v-g8n" secondAttribute="leading" constant="175" id="53e-4H-9wW"/>
+                            <constraint firstItem="0Tz-MF-FLy" firstAttribute="top" secondItem="dWh-fv-qgJ" secondAttribute="top" constant="25" id="6dC-YE-XWh"/>
+                            <constraint firstItem="Df5-sR-iqx" firstAttribute="centerX" secondItem="zNY-ot-ubQ" secondAttribute="centerX" id="HIa-Zu-87e"/>
+                            <constraint firstItem="zNY-ot-ubQ" firstAttribute="top" secondItem="Df5-sR-iqx" secondAttribute="bottom" constant="54" id="Jdf-wx-zY1"/>
+                            <constraint firstItem="Df5-sR-iqx" firstAttribute="top" secondItem="sgL-wl-TCL" secondAttribute="bottom" constant="19" id="JvN-az-MTb"/>
+                            <constraint firstItem="0Tz-MF-FLy" firstAttribute="trailing" secondItem="sgL-wl-TCL" secondAttribute="trailing" id="SL3-mh-DBU"/>
+                            <constraint firstItem="gji-sQ-URu" firstAttribute="leading" secondItem="dWh-fv-qgJ" secondAttribute="leading" constant="136" id="SSP-Yu-Esf"/>
+                            <constraint firstItem="0Tz-MF-FLy" firstAttribute="leading" secondItem="cIr-5v-g8n" secondAttribute="leadingMargin" id="V6b-RA-rqE"/>
+                            <constraint firstItem="0Tz-MF-FLy" firstAttribute="trailing" secondItem="cIr-5v-g8n" secondAttribute="trailingMargin" id="Wp1-in-NdC"/>
+                            <constraint firstItem="sgL-wl-TCL" firstAttribute="centerX" secondItem="Df5-sR-iqx" secondAttribute="centerX" id="ZIJ-ZW-V5t"/>
+                            <constraint firstItem="zNY-ot-ubQ" firstAttribute="leading" secondItem="dWh-fv-qgJ" secondAttribute="leading" constant="87" id="cIM-xD-ExW"/>
+                            <constraint firstItem="dWh-fv-qgJ" firstAttribute="trailing" secondItem="gji-sQ-URu" secondAttribute="trailing" constant="123" id="lEb-PM-tZL"/>
+                            <constraint firstItem="Df5-sR-iqx" firstAttribute="leading" secondItem="dWh-fv-qgJ" secondAttribute="leading" constant="76" id="lPa-0y-tfy"/>
+                            <constraint firstItem="gji-sQ-URu" firstAttribute="top" secondItem="zNY-ot-ubQ" secondAttribute="bottom" constant="47" id="n9w-vz-b6q"/>
+                            <constraint firstItem="6Ns-Bw-NMO" firstAttribute="top" secondItem="cIr-5v-g8n" secondAttribute="top" constant="307" id="ou7-1x-56E"/>
+                            <constraint firstItem="sgL-wl-TCL" firstAttribute="top" secondItem="0Tz-MF-FLy" secondAttribute="bottom" constant="25" id="qJr-sp-maQ"/>
+                            <constraint firstItem="0Tz-MF-FLy" firstAttribute="leading" secondItem="sgL-wl-TCL" secondAttribute="leading" id="rtT-04-LhP"/>
+                            <constraint firstItem="dWh-fv-qgJ" firstAttribute="bottom" secondItem="gji-sQ-URu" secondAttribute="bottom" constant="174" id="wQQ-Wt-EQh"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="The guessing game" id="Oct-I3-geY"/>
+                    <connections>
+                        <outlet property="labelReamingGuess" destination="0Tz-MF-FLy" id="Sj0-1A-064"/>
+                        <outlet property="labelSupport" destination="sgL-wl-TCL" id="c85-qv-mLl"/>
+                        <outlet property="textFieldSing" destination="zNY-ot-ubQ" id="Kq5-ng-aKL"/>
+                        <segue destination="FaD-bL-06c" kind="show" identifier="tahminToSonuc" id="KvS-Xp-879"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ued-K0-Ede" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1607" y="-8"/>
+        </scene>
+        <!--Secondmy View-->
+        <scene sceneID="AMD-tL-mtO">
+            <objects>
+                <viewController id="FaD-bL-06c" customClass="secondmyView" customModule="newDiece" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ltn-6w-OUV">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="783"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="happyImages" translatesAutoresizingMaskIntoConstraints="NO" id="oCI-SO-xmS">
+                                <rect key="frame" x="72" y="169" width="248" height="212"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Congratulations, you got it right" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yk1-p0-dhm">
+                                <rect key="frame" x="0.0" y="401" width="393" height="61"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="61" id="l97-FJ-N4j"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                <color key="textColor" red="0.96862745289999996" green="0.90196073060000004" blue="0.30196079609999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zdm-X5-BhB">
+                                <rect key="frame" x="139" y="517" width="115" height="61"/>
+                                <color key="backgroundColor" systemColor="labelColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="61" id="HL6-uP-VeV"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" imagePlacement="top" title="Play Again">
+                                    <imageReference key="image" image="logo.playstation" catalog="system" symbolScale="large"/>
+                                    <color key="baseForegroundColor" systemColor="secondarySystemGroupedBackgroundColor"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <segue destination="BYZ-38-t0r" kind="show" id="uau-m2-Z4b"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="4a9-1L-ShN"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="zdm-X5-BhB" firstAttribute="top" secondItem="yk1-p0-dhm" secondAttribute="bottom" constant="55" id="8uq-JX-nFP"/>
+                            <constraint firstItem="oCI-SO-xmS" firstAttribute="centerX" secondItem="ltn-6w-OUV" secondAttribute="centerX" id="8wd-hI-5Mb"/>
+                            <constraint firstItem="4a9-1L-ShN" firstAttribute="bottom" secondItem="zdm-X5-BhB" secondAttribute="bottom" constant="205" id="JCQ-Dp-VmH"/>
+                            <constraint firstItem="yk1-p0-dhm" firstAttribute="centerX" secondItem="zdm-X5-BhB" secondAttribute="centerX" id="OiV-1Y-hwr"/>
+                            <constraint firstItem="oCI-SO-xmS" firstAttribute="centerX" secondItem="yk1-p0-dhm" secondAttribute="centerX" id="XBL-cK-U3Y"/>
+                            <constraint firstItem="oCI-SO-xmS" firstAttribute="leading" secondItem="4a9-1L-ShN" secondAttribute="leading" constant="72" id="Yfg-zy-nqC"/>
+                            <constraint firstItem="yk1-p0-dhm" firstAttribute="leading" secondItem="4a9-1L-ShN" secondAttribute="leading" id="cgK-BE-auB"/>
+                            <constraint firstItem="yk1-p0-dhm" firstAttribute="top" secondItem="oCI-SO-xmS" secondAttribute="bottom" constant="55" id="lmM-f9-kYE"/>
+                            <constraint firstItem="zdm-X5-BhB" firstAttribute="leading" secondItem="4a9-1L-ShN" secondAttribute="leading" constant="139" id="ulc-7v-Gk6"/>
+                            <constraint firstItem="oCI-SO-xmS" firstAttribute="top" secondItem="4a9-1L-ShN" secondAttribute="top" constant="66" id="z57-nu-K1B"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="ANc-Sc-mJk"/>
+                    <connections>
+                        <outlet property="imageShow" destination="oCI-SO-xmS" id="Pap-LA-JXc"/>
+                        <outlet property="labelShow" destination="yk1-p0-dhm" id="O6r-w3-kzW"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vMk-hl-u7m" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2370" y="10"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="gf1-ik-6Iu">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="35Q-NS-hiC" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" id="6fF-62-v2Z"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="6sa-fQ-VCi">
+                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="E0S-zH-JJX"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rs7-kK-VWV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="101.5267175572519" y="3.5211267605633805"/>
+        </scene>
+    </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="KvS-Xp-879"/>
+        <segue reference="uau-m2-Z4b"/>
+    </inferredMetricsTieBreakers>
+    <resources>
+        <image name="guessingIcon" width="170.66667175292969" height="170.66667175292969"/>
+        <image name="happyImages" width="166" height="166"/>
+        <image name="logo.playstation" catalog="system" width="128" height="92"/>
+        <image name="questionmark" catalog="system" width="94" height="128"/>
+        <image name="zarplay" width="170.66667175292969" height="170.66667175292969"/>
+        <systemColor name="labelColor">
+            <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="opaqueSeparatorColor">
+            <color red="0.77647058823529413" green="0.77647058823529413" blue="0.78431372549019607" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="secondarySystemGroupedBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBrownColor">
+            <color red="0.63529411764705879" green="0.51764705882352946" blue="0.36862745098039218" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
